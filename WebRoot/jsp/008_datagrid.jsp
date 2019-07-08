@@ -17,11 +17,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
 	<link rel="stylesheet" type="text/css" href="css/common.css" />
-	<script type="text/javascript" src="js/jquery-easyui-1.2.6/jquery-1.7.2.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="js/jquery-easyui-1.2.6/themes/default/easyui.css" />
-	<link rel="stylesheet" type="text/css" href="js/jquery-easyui-1.2.6/themes/icon.css" />
-	<script type="text/javascript" src="js/jquery-easyui-1.2.6/jquery.easyui.min.js"></script>
-	<script type="text/javascript" src="js/jquery-easyui-1.2.6/locale/easyui-lang-zh_CN.js"></script>
+	<script type="text/javascript" src="js/jquery-easyui-1.7.0/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="js/jquery-easyui-1.7.0/themes/default/easyui.css" />
+	<link rel="stylesheet" type="text/css" href="js/jquery-easyui-1.7.0/themes/icon.css" />
+	<script type="text/javascript" src="js/jquery-easyui-1.7.0/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="js/jquery-easyui-1.7.0/locale/easyui-lang-zh_CN.js"></script>
 	<script type="text/javascript" src="js/commons.js"></script>
 	<script type="text/javascript">
 			$(function(){
@@ -244,7 +244,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 									iconCls:'icon-remove' , 
 									handler:function(){
 											var arr =$('#t_user').datagrid('getSelections');
-											if(arr.length <=0){
+											console.info(arr);
+											/*if(arr.length <=0){
 												$.messager.show({
 													title:'提示信息!',
 													msg:'至少选择一行记录进行删除!'
@@ -273,7 +274,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 															return ;
 														}
 												});
-											}
+											}*/
 									}								
 								},{
 									text:'查询用户' , 
