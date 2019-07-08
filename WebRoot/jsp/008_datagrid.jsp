@@ -169,11 +169,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 											data:{id:value},
 											dataType:'json' ,
 											success:function(result){
-												console.info(typeof result.name);
 												str = result.name ;
 											}
 										});
-										return str ;
+										return str;
 									}
 								},{
 									field:'salary' ,

@@ -24,7 +24,7 @@ public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao {
 	public List<User> findByPagination(int currentPage, int pageSize  ,Map<String ,Object> m)
 			throws Exception {
 		Connection conn = DBUtils.createConn();
-		String sql = " select * from user2  where 1=1 ";
+		String sql = " select * from user  where 1=1 ";
 		
 		Set<Entry<String, Object>> set = m.entrySet();
 		Iterator io = set.iterator();
@@ -76,7 +76,7 @@ public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao {
 	public int getTotal(Map<String ,Object> m) throws Exception {
 		
 		Connection conn = DBUtils.createConn();
-		String sql = " select count(*) from user2  where 1=1 ";
+		String sql = " select count(*) from user  where 1=1 ";
 		
 		Set<Entry<String, Object>> set = m.entrySet();
 		Iterator io = set.iterator();
@@ -115,7 +115,7 @@ public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao {
 	 */
 	public List<User> searchByName(String q) throws Exception {
 		Connection conn = DBUtils.createConn();
-		String sql =" select * from user2 where username like '%" + q + "%'" ;
+		String sql =" select * from user where username like '%" + q + "%'" ;
 		PreparedStatement ps = DBUtils.getPs(conn, sql);
 		ResultSet rs = ps.executeQuery();
 		List<User> ulist = new ArrayList<User>();

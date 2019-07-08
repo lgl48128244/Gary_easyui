@@ -2,15 +2,14 @@ package com.bjsxt.model;
 
 public class City {
 
-	
-	private int id ; 
+	private int id ;
 	private String name ;
 	private int pro_id;
 
 	public City() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
+
 	public City(int id, String name, int proId) {
 		super();
 		this.id = id;

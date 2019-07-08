@@ -22,7 +22,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
 	<script type="text/javascript">
-		alert('我也被加载了!');
+		console.info('我也被加载了!');
 	</script>  
     This is my JSP page. <br>
   </body>
